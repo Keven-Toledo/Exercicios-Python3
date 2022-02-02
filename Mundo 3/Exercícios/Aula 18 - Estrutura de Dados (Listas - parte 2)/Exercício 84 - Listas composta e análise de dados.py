@@ -1,14 +1,18 @@
 pessoas = list()    # Lista Principal
 cadastro = list()   # Lista Auxiliar
 while True:
-    cadastro.append(str(input('Qual o seu nome? ')).strip().capitalize())
-    cadastro.append(float(input('Qual o seu peso? ')))
+    print('=' * 20)
+    cadastro.append(str(input('Primeiro nome? ')).strip().capitalize())
+    cadastro.append(float(input('Qual o peso? ')))
     pessoas.append(cadastro[:])
     cadastro.clear()
-    resposta = str(input('Deseja continuar? ')).strip().upper()[0]
+    print('-' * 20)
+    resposta = str(input('\033[1;32mDeseja continuar? \033[m')).strip().upper()[0]
     while resposta not in 'SN':
-        print('Inválido! Responda "Sim" ou "Não"')
-        resposta = str(input('Deseja continuar? ')).strip().upper()[0]
+        print('\033[1;31m=-' * 20)
+        print('\033[1;31mInválido! Responda "Sim" ou "Não"')
+        print('=-' * 20, '\033[m')
+        resposta = str(input('\033[1;33mDeseja continuar? \033[m')).strip().upper()[0]
     if resposta == 'N':
         break
 
@@ -16,7 +20,9 @@ while True:
 nomes = list()
 for ciclo in range(0, len(pessoas)):
     nomes.append(pessoas[ciclo][0])
-print(f'Foram cadastrados {len(nomes)} nomes')
+print()
+print('-=' * 5, f'{"Informações":^5}', '-=' * 5)
+print(f'Cadastrados: {len(nomes)} usuários')
 
 # Criar lista de pesos
 pesos = list()
