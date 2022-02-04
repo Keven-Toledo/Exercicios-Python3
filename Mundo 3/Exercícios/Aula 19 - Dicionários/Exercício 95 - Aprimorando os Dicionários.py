@@ -69,7 +69,7 @@ while True:
                 print('--' * 16)
                 print(f'>> DETALHES DAS PARTIDAS DE {jogadores[ID]["Nome"]}')
                 for partida, gol in enumerate(jogadores[ID]['Gols']):
-                    print(f'{partida + 1}ª partida fez {gol}')
+                    print(f'{partida + 1}ª partida fez {gol} gols')
         else:
             break
     else:
@@ -94,6 +94,6 @@ while True:
                 print('--' * 16)
                 print(f'>> DETALHES DAS PARTIDAS DE {jogadores[ID]["Nome"]}')
                 for partida, gol in enumerate(jogadores[ID]['Gols']):
-                    print(f'{partida + 1}ª partida fez {gol}')
+                    print(f'{partida + 1}ª partida fez {gol} gols')
         else:
             break
