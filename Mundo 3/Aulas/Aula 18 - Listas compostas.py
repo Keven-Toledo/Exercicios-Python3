@@ -36,3 +36,27 @@ for pessoa in Lista_principal:
         menor_idade += 1
 print(f'''Há {maior_idade} pessoas maior de idade e
 {menor_idade} menor de idade''')"""
+
+# Extraindo elementos de listas compostas (método 1)
+'''nomes = list()
+for ciclo in range(0, len(pessoas)):
+    nomes.append(pessoas[ciclo][0])
+print()
+print('-=' * 5, f'{"Informações":^5}', '-=' * 5)
+print(f'Cadastrados: {len(nomes)} usuários')'''
+
+# Extraindo elementos de listas compostas (método 2)
+'''pesos = list()
+for lista in pessoas:
+    pesos.append(lista[1])'''
+
+# Nome das pessoas mais pesadas
+'''print(f'O maior peso foi de {pesado}Kg, referente a ', end='')
+contador_pesado = 0
+for pessoa in pessoas:
+    if pessoa[1] == pesado:
+        contador_pesado += 1
+        if contador_pesado == 1:
+            print(f'{pessoa[0]}', end='')
+        elif contador_pesado > 1:
+            print(f', {pessoa[0]}', end='')'''
