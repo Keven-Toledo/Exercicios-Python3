@@ -1,29 +1,42 @@
-def titulo():
-    x = len('Analisando os valores passados...') + 4
+def titulo(txt):
+    x = len(txt) + 4
     print('=' * x)
-    print(f'{"Analisando os valores passados...": ^{x}}')
+    print(f'{txt: ^{x}}')
     print('=' * x)
 
 
-def maior(* var):
-    cres = sorted(var)
-    maximo = max(var)
-    total = len(var)
-    titulo()
-    for n in cres:
-        if len(cres) == 1 and n == 0:
+def maior(numbers):
+    total = len(numbers)
+    titulo('Analisando os valores passados...')
+    contador = maio = 0
+
+    print('Numeros: ', end='')
+    while contador < len(numbers):
+        if contador == 1:
+            maio = numbers[contador]
+        else:
+            if numbers[contador] > maio:
+                maio = numbers[contador]
+
+        if len(numbers) == 1 and numbers[0] == 0:
             print('Não houveram números informados')
             break
-    else:
-        print('Numeros ordenados: ', end='')
-        for numero in cres:
-            print(f'{numero}', end=' ')
-        print(f'\nTotal de números: {total}')
-        print(f'Maior valor: {maximo}')
+
+        print(numbers[contador], end=' ')
+        contador += 1
+    print(f'\nQuantidade de números: {total}')
+    print(f'Maior valor: {maio}')
 
 
-maior(2, 9, 4, 5, 7, 1)
-maior(4, 7, 0)
-maior(1, 2)
-maior(6)
-maior(0)
+titulo('Crie sua lista')
+numeros = list()
+cont = 1
+while True:
+    num = int(input(f'{cont}ª valor: '))
+    numeros.append(num)
+    continuar = str(input('Continuar? ')).strip().upper()[0]
+    if continuar == 'N':
+        break
+    cont += 1
+maior(numeros)
+
