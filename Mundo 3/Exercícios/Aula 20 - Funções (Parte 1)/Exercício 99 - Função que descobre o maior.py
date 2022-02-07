@@ -39,4 +39,3 @@ while True:
         break
     cont += 1
 maior(numeros)
-
