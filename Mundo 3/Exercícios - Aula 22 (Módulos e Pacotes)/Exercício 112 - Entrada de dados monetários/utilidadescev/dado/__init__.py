@@ -3,15 +3,11 @@ def red(txt):
 
 
 def leiadinheiro(txt):
-    valor = 0
-    while True:
-        num = str(input(txt))
-        if num.isnumeric():
-            valor = float(num)
-            break
+    valor = False
+    while not valor:
+        entrada = str(input(txt)).replace(',', '.').strip()
+        if entrada.isalpha() or entrada == "":
+            red(f'ERRO: \"{entrada}\" não é válido')
         else:
-            if num.strip() == '':
-                red(f'Erro: " " não é válido')
-            else:
-                red(f'Erro: {num} não é válido')
-    return valor
+            valor = True
+            return float(entrada)
