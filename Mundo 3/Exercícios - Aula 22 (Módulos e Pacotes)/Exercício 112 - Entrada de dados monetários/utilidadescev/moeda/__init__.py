@@ -45,7 +45,7 @@ def metade(numero, show=False):
         return f'{met}'
 
 
-def resumo(num, aumento, desconto):
+def resumo(num=0, aumento=0, desconto=0):
     desc = int(desconto)
     aument = int(aumento)
     numero = float(num)
