@@ -29,7 +29,7 @@ def titulo(txt, cor=0):
 
 while True:
     titulo('Sistema de Ajuda Pyhelp', 2)
-    fun = str(input('Biblioteca ou Função: '))
+    fun = str(input('biblioteca ou Função: '))
     if fun == 'fim':
         break
     helping(fun)
