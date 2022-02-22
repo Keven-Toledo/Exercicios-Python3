@@ -2,10 +2,9 @@ def red(txt):
     print(f'\033[1;31m{txt} \033[m')
 
 
-def leiaint(msg):
-    valor = 0
+def leiaint(nume):
     while True:
-        num = str(input(msg))
+        num = str(input(nume))
         if num.isnumeric():
             valor = int(num)
             break
